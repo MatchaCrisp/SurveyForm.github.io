@@ -1,0 +1,93 @@
+<!--good form html5-->
+<!DOCTYPE html>
+<html>
+    <!--metadata-->
+    <head>
+        <!--fonts and css sheet-->
+
+        <!--tab title-->
+        <title>
+            Flareon appreciation survey
+        </title>
+        <!--style sheet-->
+        <style>
+
+        </style>
+    </head>
+    <!--user content-->
+    <body>
+        <!--semantic head-->
+        <header>
+            <h1 id = "title">Who's the best Pokemon?</h1>
+        </header>
+        <!--semantic main ele-->
+        <main>
+            <p id="description">
+                A crowd survey on which pokemon is the best, and why it is Flareon
+            </p>
+            <form id="survey-form">
+
+                <label for="name" id ="name-label">Please enter your name here. (required)</label>
+                <input type="text" name="name" id="name" placeholder="John Smith" required>
+                <br>
+
+                <label for="email" id="email-label">Please enter your email here for future Flareon news and events. (required)</label>
+                <input type="email" name="email" id="email" placeholder="smithy@gmail.com" required>
+                <br>
+
+                <label for="number" id="number-label">Please select on a scale of 1-5 the awesomeness of Flareon</label> 
+                <input type="number" name="number" id="number" placeholder="10" min="10" max="100">
+                <br>
+
+                <label for="sel">Please select the best pokemon from the dropdown list!</label>
+                <select name="sel" id="dropdown">
+                    <option value="selOp1">Flareon</option>
+                    <option value="selOp2">Flareon</option>
+                    <option value="selOp3">Flareon</option>
+                </select>
+                <br>
+
+                <p>How many generations of pokemon are you familiar with?</p>
+                
+                <input type="radio" name="rads" id="rad1" value="10p">
+                <label for="rad1">1-3</label>
+                
+                <input type="radio" name="rads" id="rad2" value="20p">
+                <label for="rad2">3-5</label>
+                
+                <input type="radio" name="rads" id="rad3" value="30p">
+                <label for="rad3">5-all</label>
+                <br>
+
+                <p>Why in your opinion, is Flareon the best pokemon?</p>
+                
+                <input type="checkbox" name="checks" id="check1" value="5p">
+                <label for="check1">Its OMEGA FLUFF</label>
+                
+                <input type="checkbox" name="checks" id="check2" value="15p">
+                <label for="check1">flamey BBQ</label>
+                
+                <input type="checkbox" name="checks" id="check3" value="25p">
+                <label for="check1">portable fondue maker</label>
+                <br>
+
+                <label for="bigTxt">Additional comments</label>
+                <br>
+                <textarea name="bigTxt" id ="bigTxt" rows="3" cols="40">Feel free to write a short essay on the awesomeness of Flareon!</textarea>
+                <br>
+
+                <input type="submit" id="submit" value="submit">
+
+            </form>
+        </main>
+        
+
+        <nav>
+
+        </nav>
+        <!--semantic foot-->
+        <footer>
+            <p></p>
+        </footer>
+    </body>
+</html>
