@@ -82,14 +82,36 @@ body::before {
     filter:blur(5px) grayscale(50%);
     opacity:20%;
 }
+.zz_bg::before {
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    background-image:url(../img/zz-bg.png);
+    background-size: 320px 240px;
+    opacity:70%;
 
+
+}
 main {
     width:30rem;
     margin: 0 auto;
     border:black 1px solid;
+    position:relative;
+
 }
 
 #banner {
     max-width:100%;
     height:10rem;
+}
+
+#banner-img {
+    max-width:100%;
+    height:auto;
+    filter:brightness(50%) grayscale(50%);
 }
