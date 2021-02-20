@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="./res/css/main.css">
         <!--tab title-->
         <title>
-            Sleep Quality Study
+            Sleep Quality Survey
         </title>
 
     </head>
@@ -15,19 +15,207 @@
     <body>
         <main>
         <!--semantic head-->
-            <header>
-                <div id="banner"><img src="#" alt="banner image of a night light"></div>
-                <h1 id = "title">Lorem ipsum</h1>
-            </header>
-            <!--semantic main ele-->
-
-            <form>
-                <div class="question">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sem odio. 
-                        Sed commodo vestibulum leo, sit amet tempus odio consectetur in. </p>
+            <header class="zz_bg" id="header">
+                <div id="banner">
+                    <img id="banner-img" src="./res/img/moonlit-bed-edit.jpg" alt="banner image of a night light">
                 </div>
+                <h1 id = "title">Sleep Quality Survey</h1>
+                <p class="tab" id="description">This survey lists some activities conventionally thought to affect sleep quality,
+                    then asks participants the degree to which they engage in said activities. This is to attempt to discern
+                    any correlation, if any, between the activities and sleep quality in the general population. 
+                </p>
+            </header>
+
+            <form id="survey-form">
+                <section class="question zz_bg" id="personal_info">
+                    <h3>Personal Info:</h3>
+                    <label class="indent" for="name" id="name-label">1. Please enter your name: </label>
+                    <input type="text" id="name" name="name" placeholder="Hannah Abbott" required> 
+                    <span class="not_imp_txt">(Required)</span><br>
+
+                    <label class="indent" for="email" id="email-label">2. Please enter your email: </label>
+                    <input type="email" id="email" name="email" placeholder="abbotHufflepuff4evr@gmail.com" required> 
+                    <span class="not_imp_txt">(Required)</span>
+
+                </section>
+
+                <section class="question zz_bg" id="main">
+                    <h3>Sleep Quality: </h3>
+                    <label class="indent" for="bedtime" id="bedtime-label">3. On average, when do you go to bed? </label>
+                    <select class="nl_on_small_screen" name="bedtime" id="bedtime" required>
+                        <option value="">--Please select one of the options--</option>
+                        <option value="early_morn">Early Morning (3AM-6AM)</option>
+                        <option value="morn">Morning (6AM-9AM)</option>
+                        <option value="late_morn">Late Morning (9AM-12PM)</option>
+                        <option value="early_afternoon">Early Afternoon (12PM-3PM)</option>
+                        <option value="afternoon">Afternoon (3PM-6PM)</option>
+                        <option value="evening">Evening (6PM-9PM)</option>
+                        <option value="night">Night (9PM-12AM)</option>
+                        <option valued="midnight">After Midnight (12AM-3AM)</option>
+                        <option valued="boi">I've never slept a day in my life BOI</option>
+                    </select>
+                    <span class="not_imp_txt">(Required)</span><br>
+
+                    <label class="indent" for="number" id="number-label">4. On average, how many hours do you sleep a night? </label>
+                    <input  class="nl_on_small_screen" type="number" id="number" name="number" placeholder="0-24" required> 
+                    <span class="not_imp_txt">(Required)</span>
+
+                    <p class="indent longQ">5. On average, how well rested would you say you are after a night's sleep? <span class="not_imp_txt">(Required)</span></p>
+                    
+                    <div class="flex_wrap">
+                        <div>
+                            <input class="centered" type="radio" id="not_rested" name="rest" value="not_rested" required> 
+                            <label class="centered" for="not_rested">Not at all rested</label>
+                        </div>
+                        <div>
+                            <input class="centered" type="radio" id="meh_rested" name="rest" value="meh_rested"> 
+                            <label class="centered" for="meh_rested">Slightly rested</label>
+                        </div>
+                        <div>
+                            <input class="centered" type="radio" id="ok_rested" name="rest" value="ok_rested"> 
+                            <label class="centered" for="ok_rested">fairly rested</label>
+                        </div>
+                        <div>
+                            <input class="centered" type="radio" id="well_rested" name="rest" value="well_rested"> 
+                            <label class="centered" for="well_rested">Well rested</label>
+                        </div>
+                        <div>
+                            <input class="centered" type="radio" id="very_rested" name="rest" value="very_rested"> 
+                            <label class="centered" for="very_rested">Very well rested</label>
+                        </div>
+                    </div>
+
+
+                </section>
+                <section class="question zz_bg">
+                    <h3>Activities: </h3>
+                    <label class="indent" for="dropdown" id="dropdown-label">6. Which job sector do you work in? </label>
+                    <select class="nl_on_small_screen" name="dropdown" id="dropdown">
+                        <option value="">--Please select one of the options--</option>
+                        <option value="food">Agriculture, Food, & Natural Resources</option>
+                        <option value="business">Business, Management, & Administration</option>
+                        <option value="communication">Communications & Information Systems</option>
+                        <option value="engineering">Engineering, Manufacturing, & Technology</option>
+                        <option value="health">Health Science Technology</option>
+                        <option value="HR">Human Services</option>
+                        <option value="student">Student</option>
+                        <option valued="unemployed">I'm currently not employed</option>
+                        <option valued="NASA">I'm a secret astronaut spy working for NASA</option>
+                    </select><br>
+
+                    <label class="indent" for="start_work" id="start_work-label">7. When does your workday start? </label>
+                    <select class="nl_on_small_screen" name="start_work" id="start_work">
+                        <option value="">--Please select one of the options--</option>
+                        <option value="early_morn">Early Morning (3AM-6AM)</option>
+                        <option value="morn">Morning (6AM-9AM)</option>
+                        <option value="late_morn">Late Morning (9AM-12PM)</option>
+                        <option value="early_afternoon">Early Afternoon (12PM-3PM)</option>
+                        <option value="afternoon">Afternoon (3PM-6PM)</option>
+                        <option value="evening">Evening (6PM-9PM)</option>
+                        <option value="night">Night (9PM-12AM)</option>
+                        <option valued="midnight">After Midnight (12AM-3AM)</option>
+                        <option valued="OP">I work 25 hours a day, 10 days a week</option>
+                    </select><br>
+                    
+                    <label class="indent" for="work_hour" id="work_hour-label">8. On average, how many hours do you work in a workday? </label>
+                    <input class="nl_on_small_screen" type="number" id="work_hour" name="work_hour" placeholder="0-24" required> 
+                    <span class="not_imp_txt">(Required)</span> <br>
+
+                    <p class="tab">9. Do you exercise?</p>
+                    <div class="grid_wrap">
+                        <div>
+                            <input class="dbl_indent" type="radio" id="no" value="no" name="exercise" required> 
+                            <label class="rads" for="no">Not much</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="radio" id="ok_day" value="ok_day" name="exercise" > 
+                            <label class="rads" for="ok_day">Sometimes, close to when I wake up</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="radio" id="ok_night" value="ok_night" name="exercise" > 
+                            <label class="rads" for="ok_night">Sometimes, close to when I go to bed</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="radio" id="yes_day" value="yes_day" name="exercise" > 
+                            <label class="rads" for="yes_day">Regularly, close to when I wake up</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="radio" id="yes_night" value="yes_night" name="exercise" > 
+                            <label class="rads" for="yes_night">Regularly, close to when I go to bed</label>
+                        </div>
+                    </div><br>
+
+                    <label class="inl indent longQ" for="substance" id="substance-label">
+                        10. Do you drink, smoke, or take any drugs/medications/substances that potentially 
+                        affect sleep (including but not limited to antidepressants, coffee, tea, painkillers, 
+                        narcotics, sleeping aid) </label>
+                    <select class="nl" name="substance" id="substance">
+                        <option value="">--Please select one of the options--</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+
+                    </select>
+                    <p class="indent longQ">11. Do you do any of the following close to bedtime and/or when trying to sleep? (Select all that apply)</p>
+                    <div class="grid_wrap">
+                        <div>
+                            <input class="dbl_indent" type="checkbox" id="paper" value="paper" name="check_bed"> 
+                            <label class="rads" for="paper">Reading (paper media)</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="checkbox" id="digit" value="digit" name="check_bed"> 
+                            <label class="rads" for="digit">Reading (digital media)</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="checkbox" id="video" value="video" name="check_bed"> 
+                            <label class="rads" for="video">Watching videos/TV shows</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="checkbox" id="games" value="games" name="check_bed"> 
+                            <label class="rads" for="games">Playing games</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="checkbox" id="social" value="social" name="check_bed"> 
+                            <label class="rads" for="social">Browsing Social Media</label>
+                        </div>
+                        <div>
+                            <input class="dbl_indent" type="checkbox" id="music" value="music" name="check_bed"> 
+                            <label class="rads" for="music">Listening to Music</label>
+                        </div>
+                    </div><br>
+
+                </section>
+                <section class="question zz_bg">
+                    <p class="indent longQ">Would you like to receive updates on the survey, when the survey results are published, our weekly newsletters and gossip columns, and other random garbage?</p>
+                    <div>
+                        <div class="dbl_indent longQ">
+                            <input  type="radio" id="yess" value="yes" name="email_update" required> 
+                            <label for="yess">Yes, send me literally every piece of digital garbage available on the internet, I am foaming at the mouth to know how some random couple I don't know is doing everyday.</label>
+                        </div>
+                        <div class="dbl_indent longQ">
+                            <input  type="radio" id="notrly" value="notrly" name="email_update" > 
+                            <label  for="notrly">Sure, but I think you are bluffing about that newsletter</label>
+                        </div>
+                        <div class="dbl_indent longQ">
+                            <input  type="radio" id="selectfew" value="selectfew" name="email_update" > 
+                            <label  for="selectfew">Just send me information related to the survey</label>
+                        </div>
+                        <div class="dbl_indent longQ">
+                            <input  type="radio" id="nahbro" value="nahbro" name="email_update" > 
+                            <label for="nahbro">No, don't talk to me or my son ever again</label>
+                        </div>
+                    </div><br>
+                    <label class="inl indent longQ" for="comments" id="comments_label">Have more information on your sleep? Feel like we could do better? Feel free to leave a comment down below!</label>
+                    <textarea class="nl_on_small_screen" id="comments" name="comments" rows="5" cols="33" maxlength=300>300 character limit</textarea> 
+
+                </section>
             </form>
         </main>
+        <footer>
+                <a href="#">Methodology</a>
+                <a href="#">About The Author</a>
+                <a href="#">Changelog</a>
+
+        </footer>
 
     </body>
 </html>
