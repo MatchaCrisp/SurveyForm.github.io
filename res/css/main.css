@@ -81,7 +81,7 @@ body::before {
     width:100%;
     height:100%;
     z-index:-1;
-    background-image:url(../img/messy-bed.jpg);
+    background-image:url(https://raw.githubusercontent.com/MatchaCrisp/SurveyForm.github.io/main/res/img/messy-bed.jpg);
     background-size:cover;
     filter:blur(3px) grayscale(50%) brightness(50%);
     opacity:20%;
@@ -96,7 +96,7 @@ body::before {
     height:100%;
 
     z-index:-1;
-    background-image:url(../img/zz-bg.jpg);
+    background-image:url(https://raw.githubusercontent.com/MatchaCrisp/SurveyForm.github.io/main/res/img/zz-bg.jpg);
 
     background-size: 320px 240px;
 
@@ -246,6 +246,10 @@ h3{
 .nl {
     display:block;
     margin:0rem 1rem 1rem 3rem;
+}
+textarea {
+    display:block;
+    margin: 1rem auto;
 }
 @media only screen and (min-width:601px) {
     .nl_on_small_screen {
