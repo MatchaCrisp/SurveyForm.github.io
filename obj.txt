@@ -1,2 +1,0 @@
-clean up css
-clean up html id

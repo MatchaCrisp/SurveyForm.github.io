@@ -1,4 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+/*=======================<800px screen layout======================
+-------------banner image----------------
+---------------title---------------------
+-----------background-------------------
+-----------Question---------------------
+-----------background-------------------
+-----------Question---------------------
+-----------background-------------------
+------------Footer--------------------
+*=============================================*/
+
+/*=======================>800px screen layout======================
+background-------------banner image----------------background
+background---------------title---------------------background
+background---------------background---------------------background
+background-----------Question---------------------background
+background---------------background---------------------background
+background-----------Question---------------------background
+background---------------background---------------------background
+background------------Footer--------------------background
+*=============================================*/
 
 /* =============CSS reset=================================== */
 html, body, div, span, applet, object, iframe,
@@ -45,13 +66,16 @@ table {
 }
 /*===========================================================*/
 
-/* asterisk applies to everything */
+/*design is mobile first*/
+
+/*===========general============*/
+/* font/box-sizing */
 *,*::before{
     /*sans-serif means with no accent on letters */
     font-family: 'Roboto Condensed', sans-serif;
     box-sizing:border-box;
 }
-
+/* colour palette */
 :root {
     --col-1:#FFFFFF;
     --col-2:#949494;
@@ -62,16 +86,117 @@ table {
     --col-7:#5E00FF;
     --col-8:#280eb3;
 }
-
+/* set rem unit */
 html {
     /*1 rem = 16 px */
     font-size:16px;
     height:100%;
     width:100%;
 }
+/* set background size */
 body {
     position:relative;
 }
+/* set main elements size */
+main {
+    position:relative;
+    width:100%;
+    height:100%;
+
+
+}
+/*=======================*/
+
+/*=============styling==========*/
+
+.tab {
+    text-indent:2rem;
+}
+.indent {
+    margin-left:1rem;
+}
+.not_imp_txt {
+    color:var(--col-2);
+    font-size: 0.8rem;
+    font-weight:400;
+}
+.dbl_indent {
+    margin-left:4rem;
+}
+
+/*class for all text/form element*/
+.zz_bg {
+    position:relative;
+    width:100%;
+    height:100%;
+    margin-bottom:1.5rem;
+    border:var(--col-2) 1px solid;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.141),0 1px 3px 0 rgba(0,0,0,0.122);
+    padding:1rem 1rem 0 1rem;
+
+}
+/*survey section heading*/
+h3{
+    margin-left:0.5rem;
+    font-weight:600;
+    font-size:1.2rem;
+    margin-bottom:1rem;
+}
+/*all form inputs*/
+.question {
+    margin: 0.75rem 0 0.75rem 0;
+}
+/*multiple choice (Q5)*/
+.flex_wrap {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+
+}
+.flex_wrap div {
+    flex-shrink:0;
+    margin: 0.5rem;
+}
+.centered {
+    display:block;
+    margin: 2px auto 2px auto;
+}
+/*multiple choice (Q9,Q11)*/
+.grid_wrap {
+    margin: 0.25rem 4rem 0.25rem 4rem;
+}
+.grid_wrap div {
+    margin-top:2px;
+    margin-bottom:2px;
+}
+/*inputs that are on new line (Q3,Q6,Q7,Q10)*/
+.block_input {
+    display:block;
+    margin-top: 0.5rem;
+    margin-left:2rem;
+}
+/*labels that are block (Q10)*/
+.block_label {
+    display:block;
+}
+/*multiple choice (Qemail)*/
+.single_wrap {
+    margin: 0.25rem 4rem 0.25rem 4rem;
+}
+.single_wrap div {
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.disclaimer {
+    color:var(--col-2);
+    font-size: 0.8rem;
+    font-weight:400;
+    margin:1rem;
+}
+/*=======================*/
+
+/*===========backgrounds============*/
+/*background for whole page*/
 body::before {
     content:'';
     display:block;
@@ -86,6 +211,9 @@ body::before {
     filter:blur(3px) grayscale(50%) brightness(50%);
     opacity:20%;
 }
+/*------------------*/
+
+/*background for areas with form or text elements*/
 .zz_bg::before {
     content:'';
     display:block;
@@ -94,58 +222,78 @@ body::before {
     left:0;
     width:100%;
     height:100%;
-
     z-index:-1;
     background-image:url(https://raw.githubusercontent.com/MatchaCrisp/SurveyForm.github.io/main/res/img/zz-bg.jpg);
-
     background-size: 320px 240px;
-
     opacity:70%;
-
-
-
 }
+/*---------------------------*/
+/*=======================*/
 
-main {
-    position:relative;
-    width:100%;
-    height:100%;
-
-
-}
-
+/*============header===========*/
+/*img wrapper*/
 #banner {
     max-width:100%;
-
 }
-
 #banner-img {
     max-width:100%;
     height:auto;
     filter:brightness(50%) grayscale(50%);
 }
-.zz_bg {
-    position:relative;
-    width:100%;
-    height:100%;
-    margin-bottom:1.5rem;
-    border:var(--col-2) 1px solid;
-    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.141),0 1px 3px 0 rgba(0,0,0,0.122);
-    padding-top:1rem;
 
-}
-
+/*override zz_bg class behaviour*/
 main #header {
     border:none;
     padding:0;
 }
 
-.tab {
-    text-indent:2rem;
+#title{
+    font-weight:600;
+    font-size:2rem;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+
 }
-.indent {
-    margin-left:2rem;
+
+#description {
+    padding:0 1rem 1rem 1rem;
 }
+
+/*=======================*/
+
+/*===========form============*/
+/*sizing input boxes*/
+#email, #name {
+    width:200px;
+}
+#number,#work_hour {
+    width:50px;
+}
+
+/*eliminate spin box from number inputs*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*center textarea input*/
+textarea {
+    display:block;
+    margin: 1rem auto;
+}
+/*center submit button*/
+#submit {
+    display:block;
+    margin:0 auto 1rem auto;
+}
+/*=======================*/
+
+/*============footer===========*/
 footer {
     margin:0rem;
     height:2rem;
@@ -166,103 +314,20 @@ footer a{
 footer a:hover {
     color:var(--col-2);
 }
-#header h1{
-    font-weight:600;
-    font-size:2rem;
-    margin-bottom:.5rem;
-    margin-left:1rem;
+/*=======================*/
 
-}
-#header p {
+/*===========media queries============*/
 
-    margin-left:1rem;
-    margin-right:1rem;
-    padding-bottom:1rem;
-}
-
-.not_imp_txt {
-    color:var(--col-2);
-    font-size: 0.8rem;
-}
-#email, #name {
-    width:200px;
-}
-#number,#work_hour {
-    width:50px;
-}
-.inl {
-    display:inline-block;
-}
-.centered {
-    display:block;
-    margin: 0.5rem auto 0.5rem auto;
-}
-.flex_wrap {
-    display:flex;
-    flex-flow:row wrap;
-    justify-content: space-around;
-
-}
-.flex_wrap div {
-    flex-shrink:0;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-}
-
-input {
-    margin-bottom: 0.5rem;
-}
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-h3{
-    margin-left:1rem;
-    font-weight:600;
-    font-size:1.2rem;
-    margin-bottom:1rem;
-}
-.dbl_indent {
-    margin-left:4rem;
-    margin-top:0.2rem;
-    margin-bottom:0.2rem;
-}
-
-.longQ {
-    margin-right:2rem;
-}
-.nl_on_small_screen {
-    display:inline-block;
-    margin:0rem 1rem 1rem 3rem;
-}
-
-.nl {
-    display:block;
-    margin:0rem 1rem 1rem 3rem;
-}
-textarea {
-    display:block;
-    margin: 1rem auto;
-}
-@media only screen and (min-width:601px) {
-    .nl_on_small_screen {
-        margin: 0rem 1rem 1rem 1rem;
-    }
-}
-@media only screen and (min-width:661px) {
+/*grid_wrap questions (Q9,Q11) become grid*/
+@media only screen and (min-width:701px) {
     .grid_wrap {
         display:grid;
         grid-template-columns:1fr 1fr;
     }
 
 }
+
+/*max form/footer size*/
 @media only screen and (min-width:801px) {
     .zz_bg {
         border-radius:8px;
@@ -281,3 +346,4 @@ textarea {
 
 
 }
+/*=======================*/
