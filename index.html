@@ -14,7 +14,9 @@
     <!--user content-->
     <body>
         <main>
+
         <!--semantic head-->
+            <!--contains title, description layed over background image-->
             <header class="zz_bg" id="header">
                 <div id="banner">
                     <img id="banner-img" src="https://raw.githubusercontent.com/MatchaCrisp/SurveyForm.github.io/main/res/img/moonlit-bed-edit.jpg" alt="banner image of a night light">
@@ -25,23 +27,31 @@
                     any correlation, if any, between the activities and sleep quality in the general population. 
                 </p>
             </header>
-
+            
+            <!--sleep survey-->
             <form id="survey-form">
+                <!--personal information-->
                 <section class="zz_bg" id="personal_info">
                     <h3>Personal Info:&nbsp; <span class="not_imp_txt">  (Required)</span></h3>
+
+                    <!--name, no validity check-->
                     <div class="question" id="q1">
                         <label class="indent" for="name" id="name-label">1. Please enter your name: </label>
                         <input type="text" id="name" name="name" placeholder="Hannah Abbott" required> 
                     </div>
 
+                    <!--email, basic email validity check-->
                     <div class="question" id="q2">
                         <label class="indent" for="email" id="email-label">2. Please enter your email: </label>
                         <input type="email" id="email" name="email" placeholder="abbotHufflepuff4evr@gmail.com" required> 
                     </div>
                 </section>
 
+                <!--general sleep quality question-->
                 <section class="zz_bg" id="sleep_quality">
                     <h3>Sleep Quality:&nbsp; <span class="not_imp_txt">  (Required)</span></h3>
+
+                    <!--bed time using dropdown-->
                     <div class="question" id="q3">
                         <label class="indent" for="bedtime" id="bedtime-label">3. On average, when do you go to bed? </label>
                         <select class="block_input" name="bedtime" id="bedtime" required>
@@ -58,12 +68,14 @@
                         </select>
                     </div>
 
+                    <!--hours slept, int input 0-24 only-->
                     <div class="question" id="q4">
                         <label class="indent" for="number" id="number-label">4. On average, how many hours do you sleep a night? </label>
                         <input type="number" id="number" name="number" min=0 max=24 placeholder="0-24" required> 
                                        
                     </div>
 
+                    <!--sleep quality, using radio buttons-->
                     <div class="question" id="q5">
                         <p class="indent">5. On average, how well rested would you say you are after a night's sleep?</p>
                     
@@ -91,12 +103,12 @@
                         </div>
             
                     </div>
-
-
                 </section>
 
+                <!--work & exercise-->
                 <section class="zz_bg" id="activities">
                     <h3>Activities: </h3>
+                    <!--job sector, using dropdown-->
                     <div class="question" id="q6">
                         <label class="indent" for="dropdown" id="dropdown-label">6. Which job sector do you work in? </label>
                         <select class="block_input" name="dropdown" id="dropdown">
@@ -113,6 +125,7 @@
                         </select>
                     </div>
 
+                    <!--work start time, using dropdown-->
                     <div class="question" id="q7">
                         <label class="indent" for="start_work" id="start_work-label">7. When does your workday start? </label>
                         <select class="block_input" name="start_work" id="start_work">
@@ -129,13 +142,15 @@
                         </select>             
                     </div>
 
+                    <!--work hours, int input 0-24 only-->
                     <div class="question" id="q8">
                         <label class="indent" for="work_hour" id="work_hour-label">8. Workhour per average workday? </label>
                         <span class="not_imp_txt">(Required)</span>  
-                        <input type="number" id="work_hour" name="work_hour" placeholder="0-24" required> 
+                        <input type="number" id="work_hour" name="work_hour" min=0 max=24 placeholder="0-24" required> 
                                        
                     </div>
 
+                    <!--exercises, using radio buttons-->
                     <div class="question" id="q9">
                         <p class="indent">9. Do you exercise?</p>
                         <div class="grid_wrap">
@@ -162,6 +177,7 @@
                         </div>                
                     </div>
 
+                    <!--substances, using drop down-->
                     <div class="question" id="q10">
                         <label class="block_label indent" for="substance" id="substance-label">
                             10. Do you drink, smoke, or take any drugs/medications/substances that potentially 
@@ -171,10 +187,10 @@
                             <option value="">--Please select one of the options--</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
-    
                         </select>                 
                     </div>
 
+                    <!--activity close to bedtime, using radio buttons-->
                     <div class="question" id="q11">
                         <p class="indent">11. Do you do any of the following close to bedtime and/or when trying to sleep? (Select all that apply)</p>
                         <div class="grid_wrap">
@@ -204,11 +220,13 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
 
+                <!--updates, news, misc-->
                 <section class="zz_bg" id="misc">
                     <h3>Misc: </h3>
+
+                    <!--email updates, using radio buttons-->
                     <div class="question" id="Qemail">
                         <p class="indent">Would you like to receive updates on the survey, when the survey results are published, our weekly newsletters and gossip columns, and other random garbage?</p>
                         <div class="single_wrap">
@@ -230,6 +248,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--extra info, using textarea-->
                     <div class="question" id="Qcomment">
                         <label class="block_label indent" for="comments" id="comments_label">Have more information on your sleep? Feel like we could do better? Feel free to leave a comment down below!</label>
                         <textarea id="comments" name="comments" rows="5" cols="33" maxlength=300>300 character limit</textarea>
@@ -241,16 +260,14 @@
                         You agree that pineapples don't belong on pizza, Chicago deepdish is just a casserole, dogs and cats are awesome, and it should be more socially acceptable to have a wall of Amy photos.
                         You also acknowledge that submission of this form may cause headaches, nausea, and hives when hearing the word: "Bababooie" especially when closely followed by the name: "John Kelly".
                     </p>
-
                 </section>
             </form>
         </main>
+        <!--navbar-->
         <footer>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Methodology</a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">About The Author</a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Changelog</a>
-
         </footer>
-
     </body>
 </html>
