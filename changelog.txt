@@ -1,9 +1,0 @@
-v0.1 add css (mobile-first)
-     get img resources
-
-v0.2 clean up css
-     clean up html id
-     add submit button and min/max to #number
-
-v1.0 polished css/html id
-     added submit button and min/max to #number
